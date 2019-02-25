@@ -10,24 +10,24 @@
 namespace thecookscravings {
     
     
-    public partial class SiteMaster {
+    public partial class WebForm2 {
         
         /// <summary>
-        /// TextBox2 control.
+        /// username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox username;
         
         /// <summary>
-        /// MainContent control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.TextBox password;
     }
 }
