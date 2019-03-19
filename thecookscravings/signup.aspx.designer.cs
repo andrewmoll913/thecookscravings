@@ -166,13 +166,13 @@ namespace thecookscravings {
         protected global::System.Web.UI.WebControls.TextBox txtConfirmPassword;
         
         /// <summary>
-        /// lblProfileImage control.
+        /// vldConfirmPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProfileImage;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator vldConfirmPassword;
         
         /// <summary>
         /// vldPasswordCompare control.
@@ -182,6 +182,15 @@ namespace thecookscravings {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator vldPasswordCompare;
+        
+        /// <summary>
+        /// lblProfileImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblProfileImage;
         
         /// <summary>
         /// profileImage control.

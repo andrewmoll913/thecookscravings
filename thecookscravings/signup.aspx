@@ -24,9 +24,10 @@
         <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password">          
         </asp:Label>
         <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="vldConfirmPassword" runat="server" ErrorMessage="Please enter confirm your password" ControlToValidate="txtConfirmPassword"></asp:RequiredFieldValidator>
+        <asp:CompareValidator ID="vldPasswordCompare" runat="server" ErrorMessage="CompareValidator" ControlToCompare="txtConfirmPassword" ControlToValidate="txtPassword"></asp:CompareValidator>
         <asp:Label ID="lblProfileImage" runat="server" Text="Profile Image">          
         </asp:Label>
-        <asp:CompareValidator ID="vldPasswordCompare" runat="server" ErrorMessage="CompareValidator" ControlToCompare="txtConfirmPassword" ControlToValidate="txtPassword"></asp:CompareValidator>
         <asp:FileUpload ID="profileImage" runat="server" />
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
     </main>
