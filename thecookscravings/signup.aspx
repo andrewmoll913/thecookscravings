@@ -25,7 +25,7 @@
         </asp:Label>
         <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="vldConfirmPassword" runat="server" ErrorMessage="Please enter confirm your password" ControlToValidate="txtConfirmPassword"></asp:RequiredFieldValidator>
-        <asp:CompareValidator ID="vldPasswordCompare" runat="server" ErrorMessage="CompareValidator" ControlToCompare="txtConfirmPassword" ControlToValidate="txtPassword"></asp:CompareValidator>
+        <asp:CompareValidator ID="vldPasswordCompare" runat="server" ErrorMessage="Passwords must be the same" ControlToCompare="txtConfirmPassword" ControlToValidate="txtPassword"></asp:CompareValidator>
         <asp:Label ID="lblProfileImage" runat="server" Text="Profile Image">          
         </asp:Label>
         <asp:FileUpload ID="profileImage" runat="server" />
