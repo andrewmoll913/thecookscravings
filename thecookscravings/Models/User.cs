@@ -13,7 +13,7 @@ namespace thecookscravings.Models
         string cs = ConfigurationManager.ConnectionStrings["DefaultConnect"].ConnectionString;
         SqlConnection conn;
 
-        public int Id { get; }
+        public int Id { get; set; }
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -39,6 +39,11 @@ namespace thecookscravings.Models
             Email = email;
         }
 
+        public User(string userName)
+        {
+            UserName = userName;
+        }
+
         public void RegisterWithoutImage(string password)
         {
             conn = new SqlConnection(cs);
@@ -53,5 +58,28 @@ namespace thecookscravings.Models
             conn.Close();
 
         }
+
+        public int Login(string password)
+        {
+            conn = new SqlConnection(cs);
+
+            using (SqlCommand cmd = new SqlCommand("isValidUser"))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@user_name", this.UserName);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Connection = conn;
+                this.conn.Open();
+                this.Id = Convert.ToInt32(cmd.ExecuteScalar());
+                this.conn.Close();
+            }
+            return this.Id;
+        }
+        private static int ReadOneRow(IDataRecord record)
+        {
+            return (int)record[0];
+        }
     }
+
+    
 }
