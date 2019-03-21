@@ -29,7 +29,7 @@
         <asp:Label ID="lblProfileImage" runat="server" Text="Profile Image">          
         </asp:Label>
         <asp:FileUpload ID="profileImage" runat="server" />
-        <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
     </main>
     
 </asp:Content>
