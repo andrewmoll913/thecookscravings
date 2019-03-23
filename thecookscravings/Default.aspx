@@ -10,7 +10,7 @@
                 <asp:BoundField DataField="image" HeaderText="image" SortExpression="image" />
             </Columns>
     </asp:GridView>
-        <asp:SqlDataSource ID="RecipesSource" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnect %>" SelectCommand="SELECT [recipe_name], [recipe_id], [image] FROM [recipes]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="RecipesSource" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnect %>" SelectCommand="SELECT [recipe_name], [recipe_id], [image] FROM [recipes]"></asp:SqlDataSource>
     </main>
 
     
