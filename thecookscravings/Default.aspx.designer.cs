@@ -13,21 +13,21 @@ namespace thecookscravings {
     public partial class _Default {
         
         /// <summary>
-        /// UserName control.
+        /// RecipesGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginName UserName;
+        protected global::System.Web.UI.WebControls.GridView RecipesGrid;
         
         /// <summary>
-        /// LoginStatus control.
+        /// RecipesSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginStatus LoginStatus;
+        protected global::System.Web.UI.WebControls.SqlDataSource RecipesSource;
     }
 }

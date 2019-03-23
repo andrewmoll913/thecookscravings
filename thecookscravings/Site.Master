@@ -52,12 +52,29 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/signup.aspx">Sign Up</a></li>
-                        <li><a runat="server" href="~/login.aspx">Login</a></li>
+                        <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>                        
-                        <li><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></li>
                     </ul>
+                
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/signup.aspx">Sign Up</a></li>
+                                <li>
+                                    <asp:LoginStatus ID="LoginStatus" runat="server" />
+                                </li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <asp:LoginName ID="UserName" runat="server" Font-Bold = "true" ></asp:LoginName>!</a></li>
+                                <li>
+                                    <asp:LoginStatus ID="LoginStatus" runat="server" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
                 </div>
             </div>
         </header>

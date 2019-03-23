@@ -9,6 +9,8 @@ namespace thecookscravings
 {
     public partial class SiteMaster : MasterPage
     {
+        public object DefaultAuthenticationTypes { get; private set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

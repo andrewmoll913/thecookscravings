@@ -3,12 +3,14 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main class="jumbotron">
-        <h1>ASP.NET</h1>
-        Welcome
-        <asp:LoginName ID="UserName" runat="server" Font-Bold = "true" />
-        <br />
-        <br />
-        <asp:LoginStatus ID="LoginStatus" runat="server" />
+        <asp:GridView ID="RecipesGrid" datasourceid="RecipesSource" runat="server" AutoGenerateColumns="False" DataKeyNames="recipe_id">
+            <Columns>
+                <asp:BoundField DataField="recipe_name" HeaderText="recipe_name" SortExpression="recipe_name" />
+                <asp:BoundField DataField="recipe_id" HeaderText="recipe_id" InsertVisible="False" ReadOnly="True" SortExpression="recipe_id" />
+                <asp:BoundField DataField="image" HeaderText="image" SortExpression="image" />
+            </Columns>
+    </asp:GridView>
+        <asp:SqlDataSource ID="RecipesSource" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnect %>" SelectCommand="SELECT [recipe_name], [recipe_id], [image] FROM [recipes]"></asp:SqlDataSource>
     </main>
 
     

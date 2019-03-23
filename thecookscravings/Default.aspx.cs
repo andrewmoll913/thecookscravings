@@ -12,10 +12,7 @@ namespace thecookscravings
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!this.Page.User.Identity.IsAuthenticated)
-            {
-                FormsAuthentication.RedirectToLoginPage();
-            }
+            
         }
     }
 }
