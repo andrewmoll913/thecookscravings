@@ -3,14 +3,60 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main class="jumbotron">
-        <asp:GridView ID="RecipesGrid" datasourceid="RecipesSource" runat="server" AutoGenerateColumns="False" DataKeyNames="recipe_id">
-            <Columns>
-                <asp:BoundField DataField="recipe_name" HeaderText="recipe_name" SortExpression="recipe_name" />
-                <asp:BoundField DataField="recipe_id" HeaderText="recipe_id" InsertVisible="False" ReadOnly="True" SortExpression="recipe_id" />
-                <asp:BoundField DataField="image" HeaderText="image" SortExpression="image" />
-            </Columns>
-    </asp:GridView>
-    <asp:SqlDataSource ID="RecipesSource" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnect %>" SelectCommand="SELECT [recipe_name], [recipe_id], [image] FROM [recipes]"></asp:SqlDataSource>
+        <asp:ListView ID="RecipeList" DataKeyNames="recipe_id" DataSourceID="RecipesSource" GroupItemCount="4" runat="server">
+            <EmptyDataTemplate>
+                <table >
+                    <tr>
+                        <td>No recipes</td>
+                    </tr>
+                </table>
+            </EmptyDataTemplate>
+            <EmptyItemTemplate>
+                <td />
+            </EmptyItemTemplate>
+            <GroupTemplate>
+                    <tr id="itemPlaceholderContainer" runat="server">
+                        <td id="itemPlaceholder" runat="server"></td>
+                    </tr>
+                </GroupTemplate>
+            <ItemTemplate>
+                <td runat="server">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src='<%# Eval("image") %>' alt='<%# Eval("image") %>' class="thumbnail"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblRecipe" runat="server" Text='<%# Eval("recipe_name") %>'></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+            </ItemTemplate>
+            <LayoutTemplate>
+                    <table style="width:100%;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table id="groupPlaceholderContainer" runat="server" style="width:100%">
+                                        <tr id="groupPlaceholder"></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </LayoutTemplate>
+        </asp:ListView>
+        <asp:SqlDataSource ID="RecipesSource" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnect %>" SelectCommand="SELECT [recipe_name], [recipe_id], [image] FROM [recipes]"></asp:SqlDataSource>
     </main>
 
     

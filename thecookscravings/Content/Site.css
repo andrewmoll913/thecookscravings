@@ -37,3 +37,8 @@ textarea {
 .user_login {
     display: grid;
 }
+
+.thumbnail {
+    height: 298px;
+    width: 258px;
+}
