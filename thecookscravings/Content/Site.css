@@ -29,16 +29,3 @@ textarea {
         padding: 0;
     }
 }
-
-.user_register {
-
-}
-
-.user_login {
-    display: grid;
-}
-
-.thumbnail {
-    height: 298px;
-    width: 258px;
-}
