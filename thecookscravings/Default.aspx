@@ -20,7 +20,7 @@
                 </div>
             </GroupTemplate>
             <ItemTemplate>
-                <asp:HyperLink ID="HyperLink1" class="card bg-dark text-white mb-4" runat="server">
+                <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# "~/RecipeDetails.aspx?recipe_id=" + Eval("recipe_id").ToString() %>' CssClass="card bg-dark text-white mb-4" runat="server">
                     <img src='<%# Eval("image") %>' alt='<%# Eval("image") %>' class="card-img-top" />
                     <div class="card-body">
                         <asp:Label ID="lblRecipeTitle" runat="server" Text='<%# Eval("recipe_name") %>' CssClass="card-title"></asp:Label>

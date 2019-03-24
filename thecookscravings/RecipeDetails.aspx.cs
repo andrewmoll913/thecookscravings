@@ -11,7 +11,10 @@ namespace thecookscravings
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Request.QueryString["recipe_id"] == null)
+            {
+                Response.Redirect("~/Default.aspx");
+            }
         }
     }
 }
