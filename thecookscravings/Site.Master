@@ -16,7 +16,7 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
-<body>
+<body class="container">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -39,14 +39,14 @@
         </asp:ScriptManager>
         <header>
 
-            <nav class="container nav navbar navbar-expand-md navbar-light bg-light">
+            <nav class="nav navbar navbar-expand-md navbar-light bg-light">
                 <a class="navbar-brand" runat="server" href="~/">The Cook's Cravings</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
 
-                <div class="navbar-collapse collapse" id="navbarNavAltMarkup">
+                <div class="navbar-collapse collapse justify-content-end ml-auto" id="navbarNavAltMarkup">
 
                     <a runat="server" href="~/" class="nav-item nav-link">Home</a>
                     <a runat="server" href="~/About" class="nav-item nav-link">About</a>
@@ -55,18 +55,14 @@
 
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
-
-                            <a runat="server" href="~/signup.aspx" class="nav-item nav-link">Sign Up</a>
-                            <asp:LoginStatus ID="LoginStatus" runat="server" CssClass="nav-item nav-link" />
-
+                                <a runat="server" href="~/signup.aspx" class="nav-item nav-link">Sign Up</a>
+                                <asp:LoginStatus ID="LoginStatus" runat="server" CssClass="nav-item nav-link" />                            
                         </AnonymousTemplate>
                         <LoggedInTemplate>
-
-                            <a runat="server" href="~/Account/Manage" title="Manage your account">Hello,
+                            <a runat="server" href="~/Account/Manage" title="Manage your account">Hi,
                                 <asp:LoginName ID="UserName" runat="server" Font-Bold="true"></asp:LoginName>
                                 !</a>
                             <asp:LoginStatus ID="LoginStatus" runat="server" CssClass="nav-item nav-link" />
-
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </div>
@@ -75,10 +71,11 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Andrew Moll</p>
-            </footer>
+
         </div>
+        <footer>
+            <p>&copy; <%: DateTime.Now.Year %> - Andrew Moll</p>
+        </footer>
     </form>
 
 </body>
