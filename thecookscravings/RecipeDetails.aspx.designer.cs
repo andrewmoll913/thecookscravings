@@ -13,12 +13,21 @@ namespace thecookscravings {
     public partial class RecipeDetails {
         
         /// <summary>
-        /// RecipeForm control.
+        /// RecipeDetailsForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView RecipeForm;
+        protected global::System.Web.UI.WebControls.FormView RecipeDetailsForm;
+        
+        /// <summary>
+        /// RecipesSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource RecipesSource;
     }
 }
