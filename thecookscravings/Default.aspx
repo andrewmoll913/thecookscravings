@@ -5,60 +5,57 @@
     <main class="jumbotron">
         <asp:ListView ID="RecipeList" DataKeyNames="recipe_id" DataSourceID="RecipesSource" GroupItemCount="4" runat="server">
             <EmptyDataTemplate>
-                <table >
-                    <tr>
-                        <td>No recipes</td>
-                    </tr>
-                </table>
+                <div class="card-deck">
+
+                    <div class="card-title">No recipes</div>
+
+                </div>
             </EmptyDataTemplate>
             <EmptyItemTemplate>
-                <td />
+                <div />
             </EmptyItemTemplate>
             <GroupTemplate>
-                    <tr id="itemPlaceholderContainer" runat="server">
-                        <td id="itemPlaceholder" runat="server"></td>
-                    </tr>
-                </GroupTemplate>
+                <div id="itemPlaceholderContainer" class="card-deck" runat="server">
+                    <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
+                </div>
+            </GroupTemplate>
             <ItemTemplate>
-                <td runat="server">
-                        <table>
-                            <tr>
-                                <td>
-                                    <img src='<%# Eval("image") %>' alt='<%# Eval("image") %>' class="thumbnail"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label ID="lblRecipe" runat="server" Text='<%# Eval("recipe_name") %>'></asp:Label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>
-                    </td>
+
+                <a class="card bg-dark text-white mb-4" runat="server">
+                    <img src='<%# Eval("image") %>' alt='<%# Eval("image") %>' class="card-img-top" />
+                    <div class="card-body">
+                        <asp:Label ID="lblRecipeTitle" runat="server" Text='<%# Eval("recipe_name") %>' CssClass="card-title"></asp:Label>
+                        <%--<asp:Label ID="lblRecipeDescription" runat="server" Text='<%# Eval("recipe_description") %>' CssClass="card-text"></asp:Label>--%>
+                    </div>
+
+                </a>
+
             </ItemTemplate>
             <LayoutTemplate>
-                    <table style="width:100%;">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <table id="groupPlaceholderContainer" runat="server" style="width:100%">
-                                        <tr id="groupPlaceholder"></tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                            </tr>
-                            <tr></tr>
-                        </tbody>
-                    </table>
-                </LayoutTemplate>
+                <div id="groupPlaceholderContainer" runat="server">
+                    <div id="groupPlaceholder" runat="server">
+                    </div>
+                </div>
+                <%--<table style="width: 100%;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table id="groupPlaceholderContainer" runat="server" style="width: 100%">
+                                    <tr id="groupPlaceholder"></tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr></tr>
+                    </tbody>
+                </table>--%>
+            </LayoutTemplate>
         </asp:ListView>
-        <asp:SqlDataSource ID="RecipesSource" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnect %>" SelectCommand="SELECT [recipe_name], [recipe_id], [image] FROM [recipes]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="RecipesSource" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnect %>" SelectCommand="SELECT [recipe_name], [recipe_id], [recipe_description], [image] FROM [recipes]"></asp:SqlDataSource>
     </main>
 
-    
+
 
 </asp:Content>
