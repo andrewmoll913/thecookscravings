@@ -13,15 +13,6 @@ namespace thecookscravings {
     public partial class WebForm1 {
         
         /// <summary>
-        /// lblUserName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUserName;
-        
-        /// <summary>
         /// txtUserName control.
         /// </summary>
         /// <remarks>
@@ -38,15 +29,6 @@ namespace thecookscravings {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator vldUserName;
-        
-        /// <summary>
-        /// lblFirstName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFirstName;
         
         /// <summary>
         /// txtFirstName control.
@@ -67,15 +49,6 @@ namespace thecookscravings {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator vldFirstName;
         
         /// <summary>
-        /// lblLastName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLastName;
-        
-        /// <summary>
         /// txtLastName control.
         /// </summary>
         /// <remarks>
@@ -92,15 +65,6 @@ namespace thecookscravings {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator vldLastName;
-        
-        /// <summary>
-        /// lblEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
         /// txtEmail control.
@@ -121,15 +85,6 @@ namespace thecookscravings {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator vldEmail;
         
         /// <summary>
-        /// lblPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPassword;
-        
-        /// <summary>
         /// txtPassword control.
         /// </summary>
         /// <remarks>
@@ -146,15 +101,6 @@ namespace thecookscravings {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator vldPassword;
-        
-        /// <summary>
-        /// lblConfirmPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblConfirmPassword;
         
         /// <summary>
         /// txtConfirmPassword control.
@@ -182,15 +128,6 @@ namespace thecookscravings {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator vldPasswordCompare;
-        
-        /// <summary>
-        /// lblProfileImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProfileImage;
         
         /// <summary>
         /// profileImage control.
